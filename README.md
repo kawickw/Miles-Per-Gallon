@@ -1,2 +1,47 @@
 # Miles-Per-Gallon
 MPG code
+
+
+import java.util.Scanner;
+
+public class MPG {
+    public static void main(String[] args) {
+        Scanner scrn = new Scanner(System.in);
+        String carBrand;
+        String carModel;
+        int carYear;
+        int startingOdo;
+        int endingOdo;
+        int gallonsUsed;
+        int totalOdo;
+        int totalMPG;
+
+        System.out.print("Enter Car Brand: ");
+        carBrand = scrn.next();
+
+        System.out.print("Enter Car Model: ");
+        carModel = scrn.next();
+
+        System.out.print("Enter Car Year: ");
+        carYear = scrn.nextInt();
+
+        System.out.print("Enter starting odometer: ");
+        startingOdo = scrn.nextInt();
+
+        System.out.print("Enter ending odometer: ");
+        endingOdo = scrn.nextInt();
+
+        System.out.print("Enter Gallons Used: ");
+        gallonsUsed = scrn.nextInt();
+
+        totalOdo = endingOdo - startingOdo;
+        totalMPG = totalOdo / gallonsUsed;
+
+        System.out.println("Car Brand: " + carBrand);
+        System.out.println("Car Model: " + carModel);
+        System.out.println("Car Year: " + carYear);
+        System.out.println("Starting Odometer: " + startingOdo);
+        System.out.println("Ending Odometer: " + endingOdo);
+        System.out.println("Total MPG: " + totalMPG);
+    }
+}
